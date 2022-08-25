@@ -10,6 +10,7 @@ function getComputerChoice(){
     return choices[Math.floor(Math.random() * choices.length)]
 }
 
+console.log(getComputerChoice())
 // Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters - 
 // the playerSelection and computerSelection - snd then return a string that declares the winner of the round 
 // like so: "You Lose! Paper beats Rock"
@@ -18,15 +19,7 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection == computerSelection){
         return "Draw"
     }
-    else if
-        (playerSelection == "rock" && computerSelection == "scissors")||
-        (playerSelection == "paper" && computerSelection == "rock")||
-        (playerSelection == "scissors" && computerSelection == "paper"){
-        return `Winner! ${playerSelection} beats ${computerSelection}`
-    }
-    else{
-        return `Loser! ${computerSelection} beats ${playerSelection}`
-    }
+
 
 }
 
