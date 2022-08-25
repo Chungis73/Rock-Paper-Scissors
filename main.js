@@ -19,9 +19,21 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection == computerSelection){
         return "Draw"
     }
-
-
+    else if(
+        (playerSelection == "rock" && computerSelection == "scissors") ||
+        (playerSelection == "paper" && computerSelection == "rock") ||
+        (playerSelection == "scissors" && computerSelection == "paper")
+    ){    
+        return `Winner! ${playerSelection} beats ${computerSelection}`
+    }
+        
+    else{
+        return `Loser! ${computerSelection} beats ${playerSelection}`
+    }
 }
+const playerSelection = "rock"
+let computerSelection = getComputerChoice() 
+console.log(playRound(playerSelection, computerSelection))
 
 // Write a NEW function called game(). Call the playRound function inside of this one to play 
 // a 5 round game that keeps score and reports a winner or loser at the end.
